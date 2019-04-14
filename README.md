@@ -9,10 +9,12 @@ Dockerコンテナ上で，"Hello world!"というメッセージをJSON形式�
 $ sudo docker build -t hello:1.0 .
 ~~~
 <br>
+
 作成したイメージを元にコンテナを起動．
-~~~
+'''
 $ sudo docker run -p 8080:80 hello:1.0
-~~~
+'''
+
 <br>
 
 そしてリクエストを送ると
@@ -20,10 +22,11 @@ $ sudo docker run -p 8080:80 hello:1.0
 $ curl -XGET -H 'Content-Type:application/json' http://localhost:8080/
 ~~~
 <br>
-~~~
+
+'''
 {
   "message": "Hello World!!"
 }
-~~~
+'''
 <br>
 が返ってくる．
